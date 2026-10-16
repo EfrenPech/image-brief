@@ -73,7 +73,6 @@ skills/image-brief/
 
 scripts/install.sh                    # instalador multiruntime
 research/SOURCES.md                   # atribución y procedencia
-odd/tasks/image-brief-skill.md        # especificación y tareas del trabajo
 ```
 
 `SKILL.md` está en inglés a propósito: los agentes lo ejecutan con más fidelidad en ese idioma, y es la convención del ecosistema de skills. La referencia en español está en `references/brief.es.md`.
