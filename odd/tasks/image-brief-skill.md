@@ -17,12 +17,12 @@ Turn the image-generation method from the beailabs video into a cross-harness ag
 
 | ID | Task | Specs | Route | Commit |
 | --- | --- | --- | --- | --- |
-| T1 | Transcribe the video and extract the method, carousels omitted | S1, S4 | inline | `7af05da` |
-| T2 | Write the skill bundle: `SKILL.md`, `references/`, `assets/` | S2, S3, S5, S6 | inline | `3b8354d` |
-| T3 | Define the brand-profile contract and template | S7 | inline | `3b8354d` |
-| T4 | Installer that copies the bundle to every harness, real dirs not symlinks | S8 | inline | `6203275` |
+| T1 | Transcribe the video and extract the method, carousels omitted | S1, S4 | inline | (not published) |
+| T2 | Write the skill bundle: `SKILL.md`, `references/`, `assets/` | S2, S3, S5, S6 | inline | `245e9f2` |
+| T3 | Define the brand-profile contract and template | S7 | inline | `245e9f2` |
+| T4 | Installer that copies the bundle to every harness, real dirs not symlinks | S8 | inline | `eb10c3d` |
 | T5 | Verify: frontmatter valid, installs byte-identical, discovery per runtime, dry-run interview | S2, S6, S8 | verify | verified, no commit |
-| T6 | Document the skill and index it in the skill registry | S2 | inline | `2678103` |
+| T6 | Document the skill and index it in the skill registry | S2 | inline | `c62f73e` |
 
 ## Log
 
@@ -32,3 +32,4 @@ Turn the image-generation method from the beailabs video into a cross-harness ag
 - **L4 (decision, user):** English `SKILL.md` + Spanish reference; full loop with pre-publish check; persistent brand profile; install to 5 runtimes + Gemini CLI.- **L5 (evidence):** `gentle-ai-verify` blocked the first draft on a real contradiction — `max 4 questions per message` against `one batched message` cannot both hold with 7 lines missing. Fixed to numbered batches of at most 4. Three partials also closed: watercolor and other finishes missing from the style catalog, the fourth catalog section unmapped to a layer, and `<project>` undefined in the brand-profile merge rule. Re-verified clean, 7 installed copies byte-identical, carousel grep empty.
 - **L6 (evidence):** Installer shipped as a real directory copy, not a symlink, because Codex skips symlinks during skill discovery. A linked install would load in four runtimes and silently never load in the fifth.
 - **L7 (outcome):** Branch `feat/image-brief-skill`, 5 commits, unpushed. Skill installed to 7 roots: Claude, Codex, OpenCode, `~/.agents`, Antigravity, Antigravity CLI, Gemini CLI.
+- **L8 (evidence):** History rewritten with `git filter-branch` to purge the verbatim transcript from every commit, not just the tip. A normal push of the branch transfers zero transcript objects; the transcript survives on disk, gitignored. The rewrite orphaned the in-flight native review lineage `review-13cb8d3f6fe0a2eb`, whose candidate worktree is a detached HEAD on a commit that no longer exists in the branch.
