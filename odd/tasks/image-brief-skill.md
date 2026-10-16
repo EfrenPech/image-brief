@@ -4,7 +4,7 @@ Turn the image-generation method from the beailabs video into a cross-harness ag
 
 ## Specs
 
-- **S1** — "analiza este video transcribelo". Source: https://youtu.be/FX8c_ytLuIQ ("Deja de generar imágenes genéricas con ChatGPT", beailabs, 18:05). Deliverable: a timestamped transcript.
+- **S1** — "analiza este video transcribelo". Source: https://youtu.be/FX8c_ytLuIQ ("Deja de generar imágenes genéricas con ChatGPT", beailabs, 18:05). Deliverable: a timestamped transcript. **Not distributed** — it is a literal reproduction of a third-party work, so it is excluded from the public tree by `.gitignore` and kept as local working material. See `research/SOURCES.md`.
 - **S2** — "que las recomendaciones para crear imagenes las volvamos un skill para claude, antigravity, py, codex opencode". One skill bundle, installed as real directories into every listed runtime.
 - **S3** — "con el objetivo de que si necesito una imagen la ia me pide informacion como lo hacen en el video para tner mejores resultados en la generacion de imagenes". The skill's first action is always a question, never an image.
 - **S4** — "del video solo omite lo de los carouseles". Chapters 13:02–18:05 are excluded from every artifact.
